@@ -19,6 +19,24 @@ h2, .h2 {
   }
 }
 
+h5, .h5, h6, .h6 {
+  font-weight: bold;
+  text-transform: none;
+}
+
+ [dir="ltr"] {
+  h2 {
+    border-bottom: none;
+    font-weight: 300;
+  }
+ }
+
+hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-color: @brand-primary;
+}
+
 .container {
   width: 100%;
   max-width: 1352px;
@@ -116,6 +134,71 @@ h2, .h2 {
   text-transform: uppercase;
 }
 
+[dir="ltr"] {
+  .btn {
+    font-weight: 300;
+  }
+}
+
+.form-group {
+  position: relative;
+}
+
+.input-fake {
+  display: none;
+}
+
+.js {
+  .input-fake {
+    display: block;
+  }
+}
+
+.input-file {
+  & + label {
+    position: absolute;
+    top:8px;
+    right: -37px;
+    font-weight: normal;
+    font-size: 85%;
+    cursor: pointer;
+    padding: 0;
+
+    .text {
+      text-decoration: underline;
+    }
+
+    .icon {
+      padding: 0 2px;
+      border:1px solid @brand-primary;
+    }
+  }
+}
+
+.js {
+  .input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.has-upload {
+  .input-fake {
+    display: none;
+  }
+  .input-file {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    position: static;
+  }
+}
+
+
 // Scale up the modal
 @media (min-width: @screen-sm-min) {
   // Automatically set modal's width for larger viewports
@@ -140,13 +223,13 @@ h2, .h2 {
     border-color: @brand-primary;
     border-width: 1px;
   }
+}
 
-  .modal-icon {
+.modal-icon {
     .icon {
-      height: 95px;
+      font-size:8em;
     }
     padding-bottom: 10px;
-  }
 }
 
 .form-group.required {

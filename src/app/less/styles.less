@@ -1,4 +1,6 @@
 @import "variables.less";
+@import "/icon/variables.less";
+@import "/icon/style.less";
 @import "bootstrap.less";
 @import "overrides.less";
 
@@ -121,6 +123,25 @@ ol.list-branches {
   }
 }
 
+.messages {
+  margin: auto;
+}
+
+.box {
+  border:1px solid @brand-secondary;
+  margin-bottom: 20px;
+}
+
+.box-message {
+  display: block;
+  padding: 40px 75px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-35%, -50%);
+  text-align: center;
+}
+
 .form-primary {
     .form-control {
       border-color: @brand-secondary;
@@ -129,7 +150,55 @@ ol.list-branches {
       &::placeholder {
         color: @brand-secondary;
       }
+
+      &.input-fake::placeholder {
+        color: @brand-secondary;
+      }
     }
+}
+
+.form-default {
+    .form-control {
+      border-color: @brand-primary;
+      color: @brand-primary;
+
+      &::placeholder {
+        color: @text-muted;
+      }
+
+      &.input-fake::placeholder {
+        color: @brand-primary;
+      }
+    }
+}
+
+form.has-upload {
+  .form-group {
+    padding-right: 40px;
+  }
+}
+
+.checkbox-custom {
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border:1px solid @brand-primary;
+  }
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:not(:checked) + .icon:before {
+      content: ' ';
+    }
+  }
 }
 
 .footer {
@@ -203,6 +272,10 @@ ol.list-branches {
       border:none;
     }
   }
+}
+
+.full-height .container {
+  position: relative;
 }
 
 #sectionLanding {
@@ -342,13 +415,7 @@ ol.list-branches {
   .container {
     background-color: #eaecf1;
 
-    .content-wrapper {
-     /* width: 40%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);*/
-    }
+    .content-wrapper {}
 
     #tabCatalogue {
       height: 100%;
@@ -429,16 +496,16 @@ ol.list-branches {
           }
         }
       }
-
-    .login-icon {
-      margin-top: floor((@grid-gutter-width / 2));
-    }
   }
 
   h3, .h3 {
     color: @brand-secondary;
     text-align: center;
   }
+}
+
+.login-icon {
+    margin-top: floor((@grid-gutter-width / 2));
 }
 
 #sectionContact {
@@ -494,4 +561,127 @@ ol.list-branches {
 #sectionMap {
   height: 560px;
   overflow: hidden;
+}
+
+#sectionCatalogue2 {
+  h1, .h1, h2, .h2, h3, .h3 {
+    display: block;
+  }
+
+  .actions {
+    position: absolute;
+    top: 0;
+    right: (@grid-gutter-width/2);
+    text-align: right;
+    width: 140px;
+
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+
+  .profile-box {
+    .profile-main {
+      width: 80%;
+      float: left;
+    }
+    .profile-thumb {
+      float: left;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      text-align: center;
+      border-right: 1px solid @brand-secondary;
+      margin-right: (@grid-gutter-width/4);
+    }
+
+    .profile-actions {
+      padding-top: 27px;
+      float: right;
+      width: 20%;
+      a {
+        color: @text-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#profileSaved {
+  &.section.section-overlay .content-wrapper {
+    position: static;
+  }
+}
+
+#profileCarousel {
+
+  .carousel-control {
+    width: 40px;
+    background: transparent;
+
+    .icon {
+      position: absolute;
+      top: 47%;
+    }
+  }
+
+  .profile-box {
+    margin-left: 60px;
+    margin-right: 60px;
+    min-height: 345px;
+  }
+
+  .profile-main {
+    position: relative;
+  }
+
+  .datas {
+    float: left;
+    padding: 30px 0 10px 40px;
+    width: 100%;
+
+    @media (min-width:@screen-md-min) {
+      padding-right: 360px;
+   }
+  }
+
+  .profile-data {
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      li {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .profile-thumb {
+    text-align: center;
+    border-bottom: 1px solid @brand-secondary;
+
+    img {
+      margin: 0 auto;
+    }
+
+    @media (min-width:@screen-md-min) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 345px;
+      height: 345px;
+      overflow: hidden;
+      margin-left: (@grid-gutter-width/4);
+      border-left: 1px solid @brand-secondary;
+      border-bottom: none;
+   }
+  }
+
+  a {
+    color: @text-color;
+    text-decoration: underline;
+  }
+
 }

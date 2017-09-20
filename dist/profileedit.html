@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="ltr" lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 
@@ -9,6 +9,9 @@
 
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- JS check: adds class .js to <html> tag -->
+    <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon.ico" />
@@ -52,7 +55,7 @@
               <li class="active"><a href="./index.html#sectionCatalogue" class="page-scroll">كتالوج الدره</a></li>
               <li><a href="./index.html#sectionServices" class="page-scroll">خدماتنا</a></li>
               <li><a href="./index.html#sectionIntroduction" class="page-scroll"> نبذه عن الشركه</a></li>
-              <li><a href="./index.html#sectionLogin" class="page-scroll btn btn-default">دخول</a></li>
+              <li><a href="./login2.html" class="page-scroll btn btn-default">دخول</a></li>
             </ul>
           </nav>
         </div>
@@ -61,55 +64,119 @@
 
     <section role="main" class="main-container subpage">
 
-      <div class="section section-overlay section-full-width full-height" id="sectionCatalogue">
+      <div class="section section-overlay section-full-width full-height" id="sectionCatalogue2">
         <div class="container">
          <div class="section-content">
             <div class="content-wrapper">
                <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="tabProfile">
+                <div role="tabpanel">
                   <div class="row">
-                    <div class="col-md-8 col-sm-offset-2">
-                      <h3>نافيد عبد القادر أنصاري </h3>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <table class="table">
-                            <tbody>
-                              <tr>
-                                <td>تاريخ الميلاد</td>
-                                <td>01/01/1993</td>
-                              </tr>
-                              <tr>
-                                <td>الجنسية</td>
-                                <td>الهند</td>
-                              </tr>
-                              <tr>
-                                <td>الحالة الإجتماعية</td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td>اللغات المتحدث بها</td>
-                                <td>الإنجليزية – اوردو – الهندية</td>
-                              </tr>
-                              <tr>
-                                <td>الوظيفة</td>
-                                <td>طباخ</td>
-                              </tr>
-                              <tr>
-                                <td>سنوات الخبره</td>
-                                <td>4 سنوات</td>
-                              </tr>
-                               <tr>
-                                <td>تفاصيل الخبره</td>
-                                <td>4 سنوات في الهند</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                    <div class="col-xs-12">
+                      <h2 class="text-center"><span class="icon icon-ed-search icon-3x"></span> Edit Profile</h2>
+                       <form action="./profilesaved.html" method="post" id="profileEditForm" class="form-default has-upload">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Date of Birth" />
+                            </div>
+
+                            <div class="form-group">
+                              <select class="form-control">
+                                <option>Gender</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <select class="form-control">
+                                <option>Nationality</option>
+                              </select>
+                            </div>
+
+                             <div class="form-group">
+                              <select class="form-control">
+                                <option>Religion</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <select class="form-control">
+                                <option>Marital Status</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <select class="form-control">
+                                <option>Language</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control input-fake" placeholder="Photo" />
+                              <input type="file" name="photo" id="photo" class="form-control input-file" placeholder="Photo" />
+                              <label for="photo"><span class="text">File Upload</span> <span class="icon icon-angle-down icon-xs"></span></label>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Weight" />
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Height" />
+                            </div>
+
+                          </div>
+                          <div class="col-sm-6">
+
+                            <div class="form-group">
+                              <select class="form-control">
+                                <option>Education</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control input-fake" placeholder="Photo" />
+                              <input type="file" name="passport" id="passport" class="form-control input-file" placeholder="Passport" />
+                              <label for="passport"><span class="text">File Upload</span> <span class="icon icon-angle-down icon-xs"></span></label>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="http://Video Link" />
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Passport Number" />
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Passport Issue Date" />
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Passport Place of Issue" />
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Passport Date of Expiry" />
+                            </div>
+
+                            <div class="form-group">
+                              <select class="form-control">
+                                <option>Type</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Civil ID" />
+                            </div>
+
+                          </div>
                         </div>
-                        <div class="col-sm-6"><p><img src="./images/profiles/image2.png" class="img-thumbnail img-responsive" width="100%" /></p></div>
-                      </div>
-                      <form action="./submitprofile.html">
-                        <p><input type="submit" value="سجل" class="btn btn-default" id="bookProfile" /></p>
+
+                        <div class="form-group text-right">
+                           <input type="submit" value="Save" class="btn btn-default" id="" />
+                        </div>
                       </form>
+
                     </div>
                   </div>
                 </div>
@@ -179,6 +246,7 @@
   <script src="./js/animate.js"></script>
   <script src="./js/fullheight.js"></script>
   <script src="./js/catalogue.js"></script>
+  <script src="./js/fileinput.js"></script>
 
   </body>
 </html>

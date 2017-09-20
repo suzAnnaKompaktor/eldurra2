@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8">
 
@@ -49,10 +49,10 @@
               <li><a href="./index.html#sectionContact" class="page-scroll">اتصل بنا</a></li>
               <li><a href="./index.html#sectionLogin" class="page-scroll">التسجيل</a></li>
               <li><a href="./index.html#sectionWebshop" class="page-scroll">سوق الدرة</a></li>
-              <li class="active"><a href="./index.html#sectionCatalogue" class="page-scroll">كتالوج الدره</a></li>
+              <li><a href="./index.html#sectionCatalogue" class="page-scroll">كتالوج الدره</a></li>
               <li><a href="./index.html#sectionServices" class="page-scroll">خدماتنا</a></li>
               <li><a href="./index.html#sectionIntroduction" class="page-scroll"> نبذه عن الشركه</a></li>
-              <li><a href="./index.html#sectionLogin" class="page-scroll btn btn-default">دخول</a></li>
+              <li class="active"><a href="./login2.html" class="page-scroll btn btn-default">دخول</a></li>
             </ul>
           </nav>
         </div>
@@ -61,60 +61,16 @@
 
     <section role="main" class="main-container subpage">
 
-      <div class="section section-overlay section-full-width full-height" id="sectionCatalogue">
+    <div class="section section-overlay section-inverse section-full-width full-height" id="profileSaved">
         <div class="container">
-         <div class="section-content">
+          <div class="section-content">
             <div class="content-wrapper">
-               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="tabProfile">
-                  <div class="row">
-                    <div class="col-md-8 col-sm-offset-2">
-                      <h3>نافيد عبد القادر أنصاري </h3>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <table class="table">
-                            <tbody>
-                              <tr>
-                                <td>تاريخ الميلاد</td>
-                                <td>01/01/1993</td>
-                              </tr>
-                              <tr>
-                                <td>الجنسية</td>
-                                <td>الهند</td>
-                              </tr>
-                              <tr>
-                                <td>الحالة الإجتماعية</td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td>اللغات المتحدث بها</td>
-                                <td>الإنجليزية – اوردو – الهندية</td>
-                              </tr>
-                              <tr>
-                                <td>الوظيفة</td>
-                                <td>طباخ</td>
-                              </tr>
-                              <tr>
-                                <td>سنوات الخبره</td>
-                                <td>4 سنوات</td>
-                              </tr>
-                               <tr>
-                                <td>تفاصيل الخبره</td>
-                                <td>4 سنوات في الهند</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="col-sm-6"><p><img src="./images/profiles/image2.png" class="img-thumbnail img-responsive" width="100%" /></p></div>
-                      </div>
-                      <form action="./submitprofile.html">
-                        <p><input type="submit" value="سجل" class="btn btn-default" id="bookProfile" /></p>
-                      </form>
-                    </div>
-                  </div>
-                </div>
 
-              </div>
+                   <div class="row">
+                     <div class="messages">
+                       <div class="box box-message">Your changes are now saved</div>
+                     </div>
+                   </div>
 
             </div>
           </div>
@@ -132,33 +88,17 @@
       </div>
     </footer>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="modalLogin">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalForgotPass2">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="غلق"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
-            <div class="modal-icon"><img src="./images/icon_lock.png" class="icon" /></div>
-            <p><small>لقد سجلت الدخول</small></p>
-            <h4>إنشاء كلمة المرور</h4>
-            <a href="#tabNewPass" data-toggle="tab" data-dismiss="modal">واصل</a>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="modalForgotPass">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="غلق"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <h4>ملء البريد الإلكتروني المسجل</h4>
+            <h4>Forgott Password</h4>
            <form action="#" method="post" id="forgotPassForm">
               <div class="form-group">
-                <input type="text" class="form-control" id="forgotPassEmail" name="email" placeholder="البريد الإلكتروني" />
+                <input type="text" class="form-control" id="forgotPassEmail" name="email" placeholder="E-mail" />
               </div>
               <div class="form-group">
                  <input type="submit" value="Submit" class="btn btn-default" id="submitForgotPassForm" data-dismiss="modal" />
@@ -178,7 +118,6 @@
   <script src="./js/scroll.js"></script>
   <script src="./js/animate.js"></script>
   <script src="./js/fullheight.js"></script>
-  <script src="./js/catalogue.js"></script>
 
   </body>
 </html>
